@@ -22,19 +22,23 @@ module hook ()
     }
 }
 
-rotate (90, X) {
-    sphere (d=ball_diameter, $fn=30);
+module suction_cup_hook () {
+    rotate (90, X) {
+        sphere (d=ball_diameter, $fn=30);
 
-    translate ([0, 0, ball_diameter/4]) {
-        cylinder (d=plug_diameter, h=plug_height + ball_diameter/4, $fn=20);
+        translate ([0, 0, ball_diameter/4]) {
+            cylinder (d=plug_diameter, h=plug_height + ball_diameter/4, $fn=20);
 
-        translate ([0, 0, plug_height - epsilon]) {
-            cylinder (d=hook_diameter, h=hook_height + epsilon * 2, $fn=20);
+            translate ([0, 0, plug_height - epsilon]) {
+                cylinder (d=hook_diameter, h=hook_height + epsilon * 2, $fn=20);
 
-            translate ([-curve_diameter/2, 0, hook_height])
-            rotate (-90, Y)
-            rotate (90, X)
-            hook ();
+                translate ([-curve_diameter/2, 0, hook_height])
+                rotate (-90, Y)
+                rotate (90, X)
+                hook ();
+            }
         }
     }
 }
+
+suction_cup_hook ();

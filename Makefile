@@ -2,7 +2,7 @@ INKSCAPEDIR = /usr/share/inkscape/extensions/
 DXF_OUTLINES = $(INKSCAPEDIR)/dxf_outlines.py
 OPENSCAD = openscad
 
-SCADFILES = suction-cup-hook.scad
+SCADFILES = suction-cup-hook.scad suction-cup-hook-top.scad suction-cup-hook-bottom.scad
 STLFILES = $(SCADFILES:.scad=.stl)
 DEPFILES = $(addsuffix deps,$(SCADFILES))
 

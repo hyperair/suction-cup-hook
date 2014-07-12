@@ -37,7 +37,12 @@ module suction_cup_hook () {
                 translate ([-curve_diameter/2, 0, hook_height])
                 rotate (-90, Y)
                 rotate (90, X)
-                hook ();
+                union () {
+                    hook ();
+
+                    translate ([0, curve_diameter/2, 0])
+                    sphere (d=hook_diameter, $fn=20);
+                }
             }
         }
     }

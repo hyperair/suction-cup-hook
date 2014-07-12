@@ -1,5 +1,5 @@
-hook_diameter = 3.35;
-plug_diameter = 4.5;
+hook_diameter = 4;
+plug_diameter = 5;
 ball_diameter = 8;
 
 plug_height = 5;

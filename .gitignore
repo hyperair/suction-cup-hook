@@ -1,0 +1,4 @@
+*.gcode
+*.x3g
+*.stl
+*.scaddeps

@@ -27,8 +27,10 @@ module suction_cup_hook () {
         sphere (d=ball_diameter, $fn=30);
 
         translate ([0, 0, ball_diameter/4]) {
-            cylinder (d=plug_diameter, h=plug_height + ball_diameter/4, $fn=20);
+            // plug that goes into the suction cup socket
+            cylinder (d=plug_diameter, h=plug_height + ball_diameter/2, $fn=20);
 
+            // long arm of the hook
             translate ([0, 0, plug_height - epsilon]) {
                 cylinder (d=hook_diameter, h=hook_height + epsilon * 2, $fn=20);
 
